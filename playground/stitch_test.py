@@ -18,7 +18,7 @@ img_right_2_3 = img[0:height, start_x_right:width]
 
 imgs = [img_left_2_3, img_right_2_3]
 
-stitcher = cv2.Stitcher.create(cv2.Stitcher_PANORAMA)
+stitcher = cv2.Stitcher.create(cv2.Stitcher_SCANS)
 status, pano = stitcher.stitch(imgs)
 
 cv2.imshow("Stitched Image", pano)
