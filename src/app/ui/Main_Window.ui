@@ -6,85 +6,71 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>450</width>
-    <height>295</height>
+    <width>633</width>
+    <height>691</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="sample_mode_button">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>50</y>
-      <width>121</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Sampling Mode</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="search_mode_button">
-    <property name="geometry">
-     <rect>
-      <x>242</x>
-      <y>51</y>
-      <width>121</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Search Sample</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="database_path_disp">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>170</y>
-      <width>301</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="database_browse_button">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>200</y>
-      <width>83</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>&amp;Browse</string>
-    </property>
-   </widget>
-   <widget class="QStackedWidget" name="stackedWidget">
-    <property name="geometry">
-     <rect>
-      <x>370</x>
-      <y>120</y>
-      <width>120</width>
-      <height>91</height>
-     </rect>
-    </property>
-    <widget class="QWidget" name="sample_mode"/>
-    <widget class="QWidget" name="search_mode"/>
-   </widget>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="mode_seletion_tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="sample_mode_tab">
+       <attribute name="title">
+        <string>Sample mode</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="search_mode_tab">
+       <attribute name="title">
+        <string>Search Samples</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="settings_tab">
+       <attribute name="title">
+        <string>Settings</string>
+       </attribute>
+       <widget class="QLineEdit" name="database_path_disp">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>411</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="database_browse_button">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>60</y>
+          <width>83</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>&amp;Browse</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>450</width>
+     <width>633</width>
      <height>19</height>
     </rect>
    </property>

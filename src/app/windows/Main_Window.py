@@ -15,6 +15,17 @@ class MainWindow(QtWidgets.QMainWindow):
         uic.loadUi("src/app/ui/Main_Window.ui", self)
         self.show()
         
+        # load all tabs
+        self.settings_tab = self.findChild(QtWidgets.QWidget, "settings_tab")
+        self.sample_mode_tab = self.findChild(QtWidgets.QWidget, "sample_mode_tab")
+        self.search_mode_tab = self.findChild(QtWidgets.QWidget, "search_mode_tab")
+        
+        
+        
+        
+        
+        
+        
         # load database path from settings
         self.database_path = load_database_path()
         
