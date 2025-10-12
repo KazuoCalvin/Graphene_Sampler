@@ -1,9 +1,11 @@
 from PyQt5 import QtWidgets, uic
 import sys
 
+from core.settings import store_database_path, load_database_path
+
 class MainWindow(QtWidgets.QMainWindow):
 
-    
+
     def __init__(self):
         
         # Initialize the parent class
@@ -13,6 +15,14 @@ class MainWindow(QtWidgets.QMainWindow):
         uic.loadUi("src/app/ui/Main_Window.ui", self)  # Load the .ui file
         self.show()
         
+        # load database path from settings
+        self.database_path = load_database_path()
+        
+        if self.database_path:
+            self.database_path_disp.setText(self.database_path)
+        else:
+            self.database_path_disp.setText("No database selected")
+
         # connect database button
         self.database_browse_button.clicked.connect(self.select_database_path)
         
@@ -28,5 +38,7 @@ class MainWindow(QtWidgets.QMainWindow):
             selected_files = dlg.selectedFiles()
             
             if selected_files:
-                database_path = selected_files[0]
-                self.database_path.setText(database_path)
+
+                self.database_path = selected_files[0]
+                self.database_path_disp.setText(self.database_path)
+                store_database_path(self.database_path)
