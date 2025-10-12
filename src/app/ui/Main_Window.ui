@@ -49,6 +49,9 @@
       <height>22</height>
      </rect>
     </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="database_browse_button">
     <property name="geometry">
@@ -62,6 +65,18 @@
     <property name="text">
      <string>&amp;Browse</string>
     </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>120</y>
+      <width>120</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="sample_mode"/>
+    <widget class="QWidget" name="search_mode"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

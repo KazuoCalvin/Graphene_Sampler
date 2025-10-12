@@ -12,7 +12,7 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         
         # Load the UI
-        uic.loadUi("src/app/ui/Main_Window.ui", self)  # Load the .ui file
+        uic.loadUi("src/app/ui/Main_Window.ui", self)
         self.show()
         
         # load database path from settings
