@@ -3,9 +3,9 @@ import sys
 
 from core.settings import store_database_path, load_database_path
 from windows.search_tab import SearchTab
+from windows.sample_tab import SampleTab
 
 class MainWindow(QtWidgets.QMainWindow):
-
 
     def __init__(self):
         
@@ -17,7 +17,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
         self.search_tab = SearchTab(self.search_mode_tab)
-        
+        self.sample_tab = SampleTab(self.sample_mode_tab)
+
         self.show()
 
 
