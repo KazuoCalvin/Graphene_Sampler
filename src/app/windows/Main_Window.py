@@ -2,6 +2,7 @@ from PyQt5 import QtWidgets, uic
 import sys
 
 from core.settings import store_database_path, load_database_path
+from windows.search_tab import SearchTab
 
 class MainWindow(QtWidgets.QMainWindow):
 
@@ -14,17 +15,17 @@ class MainWindow(QtWidgets.QMainWindow):
         # Load the UI
         uic.loadUi("src/app/ui/Main_Window.ui", self)
         self.show()
-        
-        # load all tabs
-        self.settings_tab = self.findChild(QtWidgets.QWidget, "settings_tab")
-        self.sample_mode_tab = self.findChild(QtWidgets.QWidget, "sample_mode_tab")
-        self.search_mode_tab = self.findChild(QtWidgets.QWidget, "search_mode_tab")
+
+
+        self.search_tab = SearchTab(self)
         
         
-        
-        
-        
-        
+
+
+
+
+
+
         
         # load database path from settings
         self.database_path = load_database_path()

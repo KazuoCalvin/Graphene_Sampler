@@ -1,0 +1,9 @@
+from PyQt5 import QtWidgets, uic
+
+class SearchTab:
+
+    def __init__(self, parent: QtWidgets.QWidget):
+
+        self.parent = parent
+
+                
