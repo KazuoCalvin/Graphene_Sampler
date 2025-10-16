@@ -14,19 +14,18 @@ class MainWindow(QtWidgets.QMainWindow):
         
         # Load the UI
         uic.loadUi("src/app/ui/Main_Window.ui", self)
+
+
+        self.search_tab = SearchTab(self.search_mode_tab)
+        
         self.show()
 
 
-        self.search_tab = SearchTab(self)
-        
-        
 
 
 
 
 
-
-        
         # load database path from settings
         self.database_path = load_database_path()
         

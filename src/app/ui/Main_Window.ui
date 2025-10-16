@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QTabWidget" name="mode_seletion_tabWidget">
+     <widget class="QTabWidget" name="mode_selection_tabWidget">
       <property name="currentIndex">
        <number>1</number>
       </property>
@@ -29,19 +29,6 @@
        <attribute name="title">
         <string>Search Samples</string>
        </attribute>
-       <widget class="QPushButton" name="test_button">
-        <property name="geometry">
-         <rect>
-          <x>120</x>
-          <y>110</y>
-          <width>83</width>
-          <height>24</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Test</string>
-        </property>
-       </widget>
       </widget>
       <widget class="QWidget" name="settings_tab">
        <attribute name="title">
