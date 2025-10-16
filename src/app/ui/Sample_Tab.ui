@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="activate_camera_button">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>220</y>
+     <x>60</x>
+     <y>350</y>
      <width>161</width>
      <height>24</height>
     </rect>
@@ -29,14 +29,27 @@
   <widget class="QLabel" name="live_feed_label">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>50</y>
-     <width>201</width>
-     <height>141</height>
+     <x>60</x>
+     <y>30</y>
+     <width>320</width>
+     <height>240</height>
     </rect>
    </property>
    <property name="text">
     <string>Camera Live Feed</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="camera_select_dropdown">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>370</y>
+     <width>72</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="currentText">
+    <string/>
    </property>
   </widget>
  </widget>

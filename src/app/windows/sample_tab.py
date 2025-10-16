@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets, QtCore, QtGui, uic
+from PyQt5 import QtWidgets, QtCore, QtGui, QtMultimedia, uic
 import cv2
 
 class SampleTab:
@@ -14,6 +14,8 @@ class SampleTab:
         self.timer.timeout.connect(self.update_frame)
         self.timer.start(int(1000 / self.fps))
 
+        # Populate camera dropdown
+        self.select_camera_dropdown_populate()
         self.camera_index = 0
         self.cap = None
         self.select_camera()
@@ -29,6 +31,23 @@ class SampleTab:
             self.cap = None
 
         self.cap = cv2.VideoCapture(self.camera_index)
+
+    
+    def select_camera_dropdown_populate(self):
+
+        self.parent.camera_select_dropdown.clear()
+
+        cams = QtMultimedia.QCameraInfo.availableCameras()
+
+        if not cams:
+            self.parent.camera_select_dropdown.addItem("No cameras found")
+            self.parent.camera_select_dropdown.setEnabled(False)
+            return
+        
+        for i, cam in enumerate(cams):
+            name = cam.description() or cam.deviceName() or f"Camera {i}"
+            self.parent.camera_select_dropdown.addItem(name, i)
+
 
     def update_frame(self):
         ret, frame = self.cap.read()
